@@ -23,13 +23,13 @@ char	*ft_strrev(char *str)
 		return (NULL);
 	j = 0;
 	while(str[j])
-		i++;
+		j++;
 	j--;
 	while(i < j)
 	{
-		tmp = str[i];
-		str[i] = str[j];
-		str[j] = tmp;
+		tmp = str[i];//先把str[i]存起来
+		str[i] = str[j];//把右边的值放到左边
+		str[j] = tmp;//把保存的原左边值放到右边
 		i++;
 		j--;
 	}
